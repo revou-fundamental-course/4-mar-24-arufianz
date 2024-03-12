@@ -10,13 +10,34 @@
     <header>
         <H1>BMI Calculator</H1>
     </header>
-    <main>
-        <div class="container-main">
+    <main class="container">
+        <div class="content-container" id="input-container">
             <section class="sex-option">
-
+                <h3>Kalkulator BMI</h3>
+                <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh 
+                    yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. 
+                    Bagaimana denganmu? Yuk, hitung sekrang di kalkulator BMI</p>
+                <label>Jenis Kelamin</label><br>
+                <input type="radio" name="sex" id="sex-man" value="man">
+                <label for="sex-man">Laki-laki</label><br>
+                <input type="radio" name="sex" id="sex-woman" value="woman">
+                <label for="sex-woman">Perempuan</label>
             </section>
-            <section class="form">
+            <section class="input-field">
+                <label for="weight">Berat Badan (kg)</label> <br>
+                <input type="number" id="weight"><br>
+                <label for="height">Tinggi Badan (cm)</label> <br>
+                <input type="number" id="height"><br>
+                <label for="age">Usia</label> <br>
+                <input type="number" id="age"><br>
+            </section>
+            <button id="count-button">Hitung BMI</button>
+            <button id="reset-button">Reset</button>
 
+        </div>
+        <div class="content-container" id="result-container">
+            <section>
+                <h1>Result</h1>
             </section>
         </div>
     </main>
