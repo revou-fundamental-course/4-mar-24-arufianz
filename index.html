@@ -12,33 +12,49 @@
     </header>
     <main class="container">
         <div class="content-container" id="input-container">
-            <section class="sex-option">
-                <h3>Kalkulator BMI</h3>
-                <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh 
-                    yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. 
-                    Bagaimana denganmu? Yuk, hitung sekrang di kalkulator BMI</p>
-                <label>Jenis Kelamin</label><br>
-                <input type="radio" name="sex" id="sex-man" value="man">
-                <label for="sex-man">Laki-laki</label><br>
-                <input type="radio" name="sex" id="sex-woman" value="woman">
-                <label for="sex-woman">Perempuan</label>
-            </section>
-            <section class="input-field">
-                <label for="weight">Berat Badan (kg)</label> <br>
-                <input type="number" id="weight"><br>
-                <label for="height">Tinggi Badan (cm)</label> <br>
-                <input type="number" id="height"><br>
-                <label for="age">Usia</label> <br>
-                <input type="number" id="age"><br>
-            </section>
-            <button id="count-button">Hitung BMI</button>
-            <button id="reset-button">Reset</button>
+            <h3>Kalkulator BMI</h3>
+            <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh 
+                yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. 
+                Bagaimana denganmu? <br> Yuk, hitung sekarang di kalkulator BMI!</p>
+            <div class="sex-select">
+                <label class="input-group-label">Jenis Kelamin</label><br>
+                <select name="sex-option" id="sex-option">
+                    <option value="" selected disabled>-</option>
+                    <option value="men">Laki-Laki</option>
+                    <option value="women">Perempuan</option>
+                </select>
+            </div>
+            <div class="input-field">
+                <label class="input-group-label" for="weight">Berat Badan (kg)</label> <br>
+                <input class="input-group-input" oninput="validateInput(this)" type="number" id="weight"><br>
+                <label class="input-group-label" for="height">Tinggi Badan (cm)</label> <br>
+                <input class="input-group-input" oninput="validateInput(this)" type="number" id="height"><br>
+                <label class="input-group-label" for="age">Usia</label> <br>
+                <input class="input-group-input" oninput="validateInput(this)" type="number" id="age"><br>
+            </div>
+            <button id="count-button" onclick="BMI()">Hitung BMI</button>
+            <button id="reset-button" onclick="Reset()">Reset</button>
 
         </div>
         <div class="content-container" id="result-container">
-            <section>
-                <h1>Result</h1>
-            </section>
+            <div>
+                <h3 id="result"></h3>
+            </div>
+            <div class="result-box" id="result-box">
+                <h2 id="result-1">Apa itu BMI?</h2>
+                <h1 id="result-2"></h1>
+                <h4 id="result-3"></h4>
+            </div>
+            <div>
+                <h4 id="result-4"></h4>
+                <p id="result-5">
+                    BMI adalah indikator pengukuran yang digunakan untuk menentukan 
+                    kategori berat badan ideal atau tidak. BMI dikembangkan oleh Adolphe 
+                    Quetelet selama abad ke-19. Melalui hasil perhitungan BMI, Anda akan 
+                    mengetahui kategori berat badan, yaitu kurus, ideal, berlebihan, atau 
+                    bahkan obesitas.
+                </p>
+            </div>
         </div>
     </main>
     <footer>
